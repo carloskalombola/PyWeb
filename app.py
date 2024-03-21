@@ -3,6 +3,9 @@ from flask import Flask
 app = Flask("Olá")
 
 @app.route('/')
+def ola():
+    return "Olá mundo, bom dia"
 
-def Ola():
-    return "Olá mundo"
+@app.route('/alunos')
+def alunos():
+    return
