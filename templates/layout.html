@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alunos</title>
+
+</head>
+
+<body>
+    <div class ="conteudo_principal">
+    <h1>Blog Python para web</h1>
+    <div class="nav">
+        {%if not session.logado%}
+          <a href=""> Login</a>
+        {%else%}
+        <a href=""> Logout</a>
+      {%endif%}
+    </div>
+    {% for mensagem in  get_flashed_messages() %}
+    <div class="flash">{{mensagem}}</div>
+    {% endfor %}
+    </div>
+
+</body>
+
+</html>
